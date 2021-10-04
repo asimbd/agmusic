@@ -34,4 +34,4 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 keepAlive();
-client.login(client.config.token);
+client.login(process.env.TOKEN);

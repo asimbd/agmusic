@@ -10,6 +10,7 @@ exports.run = async (client, message) => {
    lyrics\`\` - get lyrics of current song
    invite\`\` - get invite link for the bot
    ping\`\` - Returns Pong!
+   serverstatus\`\` - See the server status!
    help\`\` - to see this command`;
 
   const revised = commands

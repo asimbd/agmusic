@@ -23,6 +23,6 @@ exports.run = async (client, message) => {
 //             message.channel.send("Server Load Status: " + "Very High");
 //         }
 
-        message.channel.send("Server Load Status: "+parseInt(info)+"%");
+        message.channel.send("Server Load: "+parseInt(info)+"%");
     })
 };

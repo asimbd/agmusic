@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-const keepAlive = require('./server.js');
 require("dotenv").config();
 
 const client = new Discord.Client();
@@ -33,5 +32,4 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-keepAlive();
 client.login(process.env.TOKEN);

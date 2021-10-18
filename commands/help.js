@@ -21,7 +21,7 @@ exports.run = async (client, message) => {
   message.channel.send(
     new MessageEmbed()
       .setAuthor(
-        "AG MUSIC Commands Help",
+        "Alan Walker Commands Help",
         "https://img.icons8.com/color/2x/services--v2.gif"
       )
       .setColor("FFFBFB")

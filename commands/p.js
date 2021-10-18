@@ -112,9 +112,13 @@ exports.run = async (client, message, args) => {
     try {
       const data = message.client.queue.get(message.guild.id);
       if (!track) {
-        data.channel.send("Queue is empty, Leaving voice channel");
-        message.guild.me.voice.channel.leave();
-        return deletequeue(message.guild.id);
+        data.channel.send("Queue is empty, Leaving in 30sec");
+        setTimeout(
+        function() {
+          data.channel.send("Leaving voice channel");
+          message.guild.me.voice.channel.leave();
+          return deletequeue(message.guild.id);
+        }, 30000);
       }
       data.connection.on("disconnect", () => deletequeue(message.guild.id));
       const source = await ytdl(track.url, {
